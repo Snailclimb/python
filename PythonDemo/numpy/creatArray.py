@@ -6,7 +6,7 @@ Created on Mon Mar 12 14:13:32 2018
 @description： numpy库创建数组的一些方法
 """
 import numpy as np
-
+from numpy.matlib import randn
 print("创建一维数组：")
 data1 = [3, 3.3, 9, 5, 6]
 arr1 = np.array(data1)
@@ -31,3 +31,7 @@ print(np.empty((3,6)))
 #用arrange函数创建数组  
 print("np.arange(9)创建一维数组：")
 print(np.arange(9))
+#用随机函数randn创建二维数组，7行4列
+print("randn(7, 4))创建数字随机的一维数组：")  
+data = randn(7, 4)   
+print(data)
