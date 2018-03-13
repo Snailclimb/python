@@ -3,6 +3,7 @@
 Created on Tue Mar 13 17:01:33 2018
 
 @author: Administrator
+@description 查询微信好友
 """
 
 #!/usr/bin/env python

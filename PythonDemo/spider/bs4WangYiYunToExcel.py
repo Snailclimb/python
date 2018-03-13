@@ -2,7 +2,8 @@
 """
 Created on Tue Mar 13 15:11:32 2018
 
-@author: Administrator
+@author: Snailclimb
+@description  爬取网易云音乐歌单（这里只爬取了一页）
 """
 
 from bs4 import BeautifulSoup

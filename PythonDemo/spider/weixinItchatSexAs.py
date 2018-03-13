@@ -3,6 +3,7 @@
 Created on Tue Mar 13 17:09:26 2018
 
 @author: Administrator
+@description 微信好友性别比例
 """
 
 import itchat

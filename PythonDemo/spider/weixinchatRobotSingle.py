@@ -3,6 +3,7 @@
 Created on Tue Mar 13 19:09:05 2018
 
 @author: Administrator
+@description使用图灵机器人自动与指定好友聊天
 """
 
 from wxpy import Bot,Tuling,embed,ensure_one
