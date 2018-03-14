@@ -5,6 +5,7 @@ Created on Tue Mar 13 21:34:29 2018
 @author: Administrator
 """
 import re,jieba,itchat
+import jieba.analyse
 import numpy as np
 from PIL import Image
 from snownlp import SnowNLP
@@ -29,7 +30,7 @@ def analyseSignature(friends):
          file.write(signatures)
 
     # Sinature WordCloud
-    back_coloring = np.array(Image.open('flower.jpg'))
+    back_coloring = np.array(Image.open('alice_color.png'))
     wordcloud = WordCloud(
         font_path='simfang.ttf',
         background_color="white",
@@ -37,8 +38,8 @@ def analyseSignature(friends):
         mask=back_coloring, 
         max_font_size=75,
         random_state=45,
-        width=960, 
-        height=720, 
+        width=1250, 
+        height=1000, 
         margin=15
     )
 
