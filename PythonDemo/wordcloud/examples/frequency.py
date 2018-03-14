@@ -29,12 +29,12 @@ def getFrequencyDictForText(sentence):
 def makeImage(text):
     alice_mask = np.array(Image.open("alice_mask.png"))
 
-
+   #background_color:设置图片背景色；max_words：设置图片能容纳的最大词数；mask：设置词云样式   
     wc = WordCloud(background_color="white", max_words=1000, mask=alice_mask)
-    # generate word cloud
+    # 生成词云
     wc.generate_from_frequencies(text)
 
-    # show
+    # 展示
     plt.imshow(wc, interpolation="bilinear")
     plt.axis("off")
     plt.show()

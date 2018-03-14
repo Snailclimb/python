@@ -3,7 +3,7 @@
 Using custom colors
 ===================
 
-Using the recolor method and custom coloring functions.
+使用重新着色方法和自定义着色功能。
 """
 
 import numpy as np
@@ -21,28 +21,24 @@ def grey_color_func(word, font_size, position, orientation, random_state=None,
 
 d = path.dirname(__file__)
 
-# read the mask image
-# taken from
-# http://www.stencilry.org/stencils/movies/star%20wars/storm-trooper.gif
+# 读取图片（图片来源：http://www.stencilry.org/stencils/movies/star%20wars/storm-trooper.gif）
 mask = np.array(Image.open(path.join(d, "stormtrooper_mask.png")))
 
-# movie script of "a new hope"
-# http://www.imsdb.com/scripts/Star-Wars-A-New-Hope.html
-# May the lawyers deem this fair use.
+# 文字来源：“新希望”电影剧本（网址：http://www.imsdb.com/scripts/Star-Wars-A-New-Hope.html）
 text = open(path.join(d, 'a_new_hope.txt')).read()
 
-# preprocessing the text a little bit
+# 预处理一点点文本
 text = text.replace("HAN", "Han")
 text = text.replace("LUKE'S", "Luke")
 
-# adding movie script specific stopwords
+# 添加电影剧本特定的停用词
 stopwords = set(STOPWORDS)
 stopwords.add("int")
 stopwords.add("ext")
 
 wc = WordCloud(max_words=1000, mask=mask, stopwords=stopwords, margin=10,
                random_state=1).generate(text)
-# store default colored image
+# 存储默认的彩色图像
 default_colors = wc.to_array()
 plt.title("Custom colors")
 plt.imshow(wc.recolor(color_func=grey_color_func, random_state=3),

@@ -13,7 +13,7 @@ itchat.auto_login(hotReload=True)
 friends = itchat.get_friends(update=True)
 sexs = list(map(lambda x: x['Sex'], friends[1:]))
 counts = list(map(lambda x: x[1], Counter(sexs).items()))
-labels = ['Unknow','Male',   'Female']
+labels = ['Male','FeMale',   'Unknown']
 colors = ['red', 'yellowgreen', 'lightskyblue']
 plt.figure(figsize=(8, 5), dpi=80)
 plt.axes(aspect=1)

@@ -11,7 +11,7 @@ from wordcloud import WordCloud
 
 d = path.dirname(__file__)
 
-# Read the whole text.
+# 读取整个文本
 text = open(path.join(d, 'constitution.txt')).read()
 
 # Generate a word cloud image
