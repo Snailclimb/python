@@ -14,22 +14,21 @@ d = path.dirname(__file__)
 # 读取整个文本
 text = open(path.join(d, 'constitution.txt')).read()
 
-# Generate a word cloud image
+# 生成一个词云图像
 wordcloud = WordCloud().generate(text)
 
-# Display the generated image:
-# the matplotlib way:
+# matplotlib的方式展示生成的词云图像
 import matplotlib.pyplot as plt
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
 
-# lower max_font_size
-wordcloud = WordCloud(max_font_size=40).generate(text)
+#设定生成词云中的文字最大大小
+wordcloud = WordCloud(max_font_size=66).generate(text)
 plt.figure()
 plt.imshow(wordcloud, interpolation="bilinear")
 plt.axis("off")
 plt.show()
 
-# The pil way (if you don't have matplotlib)
+# pil方式展示生成的词云图像（如果你没有matplotlib）
 # image = wordcloud.to_image()
 # image.show()
