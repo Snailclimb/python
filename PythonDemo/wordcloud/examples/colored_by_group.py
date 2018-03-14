@@ -3,8 +3,7 @@
 Colored by Group Example
 ========================
 
-Generating a word cloud that assigns colors to words based on
-a predefined mapping from colors to words
+生成一个根据从颜色到单词的预定义映射分配颜色的词云
 """
 
 from wordcloud import (WordCloud, get_single_color_func)

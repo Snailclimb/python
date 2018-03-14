@@ -3,7 +3,7 @@
 Minimal Example
 ===============
 
-Generating a square wordcloud from the US constitution using default arguments.
+使用默认参数根据美国宪法生成方形的词云
 """
 
 from os import path
@@ -22,7 +22,9 @@ import matplotlib.pyplot as plt
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
 
-#设定生成词云中的文字最大大小
+#max_font_size设定生成词云中的文字最大大小
+#width,height,margin可以设置图片属性
+# generate 可以对全部文本进行自动分词,但是他对中文支持不好
 wordcloud = WordCloud(max_font_size=66).generate(text)
 plt.figure()
 plt.imshow(wordcloud, interpolation="bilinear")

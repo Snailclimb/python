@@ -1,9 +1,6 @@
 
 import multidict as multidict
-
 import numpy as np
-import time
-
 import re
 from PIL import Image
 from os import path

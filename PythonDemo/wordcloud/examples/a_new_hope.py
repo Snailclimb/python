@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Using custom colors
+使用自定义颜色
 ===================
 
 使用重新着色方法和自定义着色功能。
