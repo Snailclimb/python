@@ -29,5 +29,3 @@ robot.chats()
 #获取好友的统计信息
 Friends = robot.friends()
 print(Friends.stats_text())
-#获取微信公众号信息
-print()
