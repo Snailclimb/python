@@ -2,7 +2,7 @@
 """
 Created on Tue Mar 13 19:09:05 2018
 
-@author: Administrator
+@author: Snailclimb
 @description使用图灵机器人自动与指定好友聊天
 """
 

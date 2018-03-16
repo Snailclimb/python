@@ -2,7 +2,7 @@
 """
 Created on Tue Mar 13 17:09:26 2018
 
-@author: Administrator
+@author: Snalclimb
 @description 微信好友性别比例
 """
 
@@ -13,7 +13,7 @@ itchat.auto_login(hotReload=True)
 friends = itchat.get_friends(update=True)
 sexs = list(map(lambda x: x['Sex'], friends[1:]))
 counts = list(map(lambda x: x[1], Counter(sexs).items()))
-labels = ['Male','FeMale',   'Unknown']
+labels = ['FeMale','Male',   'Unknown']
 colors = ['red', 'yellowgreen', 'lightskyblue']
 plt.figure(figsize=(8, 5), dpi=80)
 plt.axes(aspect=1)

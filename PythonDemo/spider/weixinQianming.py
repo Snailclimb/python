@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Mar 13 21:34:29 2018
-
-@author: Administrator
+朋友圈朋友签名的词云生成以及
+签名情感分析
 """
 import re,jieba,itchat
 import jieba.analyse
@@ -16,7 +15,6 @@ friends = itchat.get_friends(update=True)
 def analyseSignature(friends):
     signatures = ''
     emotions = []
-    pattern = re.compile("1f\d.+")
     for friend in friends:
         signature = friend['Signature']
         if(signature != None):
@@ -29,7 +27,7 @@ def analyseSignature(friends):
     with open('signatures.txt','wt',encoding='utf-8') as file:
          file.write(signatures)
 
-    # Sinature WordCloud
+    # 朋友圈朋友签名的词云相关属性设置
     back_coloring = np.array(Image.open('alice_color.png'))
     wordcloud = WordCloud(
         font_path='simfang.ttf',
@@ -42,23 +40,24 @@ def analyseSignature(friends):
         height=1000, 
         margin=15
     )
-
+    
+    #生成朋友圈朋友签名的词云
     wordcloud.generate(signatures)
     plt.imshow(wordcloud)
     plt.axis("off")
     plt.show()
-    wordcloud.to_file('signatures.jpg')
+    wordcloud.to_file('signatures.jpg')#保存到本地文件
 
     # Signature Emotional Judgment
-    count_good = len(list(filter(lambda x:x>0.66,emotions)))
-    count_normal = len(list(filter(lambda x:x>=0.33 and x<=0.66,emotions)))
-    count_bad = len(list(filter(lambda x:x<0.33,emotions)))
+    count_good = len(list(filter(lambda x:x>0.66,emotions)))#正面积极
+    count_normal = len(list(filter(lambda x:x>=0.33 and x<=0.66,emotions)))#中性
+    count_bad = len(list(filter(lambda x:x<0.33,emotions)))#负面消极
     labels = [u'负面消极',u'中性',u'正面积极']
     values = (count_bad,count_normal,count_good)
     plt.rcParams['font.sans-serif'] = ['simHei'] 
     plt.rcParams['axes.unicode_minus'] = False
-    plt.xlabel(u'情感判断')
-    plt.ylabel(u'频数')
+    plt.xlabel(u'情感判断')#x轴
+    plt.ylabel(u'频数')#y轴
     plt.xticks(range(3),labels)
     plt.legend(loc='upper right',)
     plt.bar(range(3), values, color = 'rgb')
