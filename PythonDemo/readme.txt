@@ -1,1 +1,3 @@
 wordcloud词云  jieba分词 itchat wxpy微信相关
+Matplotlib第三库
+numpy第三库
