@@ -13,5 +13,5 @@ browser.get('https://passport.csdn.net/account/login')
 browser.find_element_by_xpath("//*[@id='username']").clear()#清空输入框
 browser.find_element_by_xpath("//*[@id='username']").send_keys("1361583339@qq.com")#输入账号
 browser.find_element_by_xpath("//*[@id='password']").clear()#清空输入框
-browser.find_element_by_xpath("//*[@id='password']").send_keys("ks1996721kr")#输入密码
+browser.find_element_by_xpath("//*[@id='password']").send_keys("cSdN153963")#输入密码
 browser.find_element_by_xpath("/html/body/div[4]/div/div/div[2]/div/div[1]/div/form/input[8]").click()#登录
