@@ -17,4 +17,6 @@
 ### PythonSpider文件夹
 主要包括一些爬虫（知乎，妹子图等等）的实现，目前更新了下列文章
 
+<-- Following article was updated -->
+
 [selenium在爬虫领域的初涉（自动打开网站爬取信息）](http://blog.csdn.net/qq_34337272/article/details/79594809)
