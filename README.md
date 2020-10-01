@@ -1,5 +1,7 @@
 备注：会一直更新下去
 
+Print("hello world")
+
 ### PythonDemo文件夹：
 包含第三库:**matplotlib（2D绘图库）**,**wordcloud（词云）**,**jieba（中文分词）**,**SnowNLP（Simplified Chinese Text Processing）**以及numpy的例子
 以及使用**itchat**以及**wxpy**对**微信好友信息实现的统计以及基于图灵机器人实现的微信聊天机器人**。
